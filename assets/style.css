@@ -1,0 +1,86 @@
+html, body { margin: 0; padding: 0; }
+body { font-family: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif; background: #fafafa; color: #111; }
+
+/* mobile-first */
+.landing {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 20px 0;
+  box-sizing: border-box;
+  gap: 0;
+}
+.landing-photo {
+  width: 220px;
+  max-width: 60vw;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.08);
+  margin-bottom: 20px;
+  display: block;
+}
+.landing-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+.landing-name .badge { height: 1.25rem; width: auto; display: inline-block; }
+.landing-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 30px;
+  background: #229ED9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(34,158,217,.35);
+  transition: transform .15s ease;
+}
+.landing-cta:hover, .landing-cta:active { transform: translateY(-1px); }
+.landing-cta svg { width: 20px; height: 20px; fill: currentColor; }
+.landing-shape {
+  width: 100%;
+  line-height: 0;
+  margin-top: auto;
+  padding-top: 40px;
+}
+.landing-shape svg { width: 100%; height: 60px; display: block; }
+.landing-footer {
+  width: 100%;
+  padding: 14px 0 calc(14px + env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+.landing-footer a { color: #666; text-decoration: none; margin: 0 8px; }
+.landing-footer a:hover { text-decoration: underline; }
+
+/* tablet & desktop */
+@media (min-width: 640px) {
+  .landing { padding: 40px 20px 0; }
+  .landing-photo { width: 280px; max-width: 80%; margin-bottom: 24px; border-radius: 16px; }
+  .landing-name { font-size: 28px; margin-bottom: 28px; gap: 8px; }
+  .landing-name .badge { height: 1.5rem; }
+  .landing-cta { padding: 14px 32px; font-size: 18px; }
+  .landing-cta svg { width: 22px; height: 22px; }
+  .landing-shape svg { height: 100px; }
+  .landing-footer { font-size: 13px; }
+}
+
+/* legal pages */
+.legal { max-width: 720px; margin: 0 auto; padding: 60px 24px; line-height: 1.6; background: #fff; }
+.legal h1 { font-size: 32px; margin: 0 0 24px; }
+.legal h2 { font-size: 20px; margin: 32px 0 12px; }
+.legal p, .legal li { font-size: 15px; color: #333; }
+.legal a { color: #229ED9; }
+.legal-back { margin-top: 40px; }
+.legal-back a { color: #666; text-decoration: none; }
